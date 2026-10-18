@@ -1,0 +1,63 @@
+WARNING:root:SECRET_KEY not set; using a random development key
+ * Serving Flask app 'app'
+ * Debug mode: off
+INFO:werkzeug:WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:Press CTRL+C to quit
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:06:51] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:06:52] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:06:53] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:06:55] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:06:56] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:06:57] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:06:58] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:06:59] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:00] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:01] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:02] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:03] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:04] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:05] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:06] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:07] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:08] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:09] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:10] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:11] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:12] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:13] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:14] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:15] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:17] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:18] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:19] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:20] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:21] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:22] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "GET /produtos HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "GET /produtos/busca?q=Mouse&preco_min=10&preco_max=500 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "GET /produtos/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "GET /produtos/9999 HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "GET /usuarios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "GET /usuarios/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "GET /pedidos HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "GET /pedidos/usuario/2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "GET /relatorios/vendas HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "POST /produtos HTTP/1.1" 201 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "POST /produtos HTTP/1.1" 400 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "GET /produtos/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "POST /usuarios HTTP/1.1" 201 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "POST /pedidos HTTP/1.1" 201 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "GET /pedidos HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "GET /pedidos/usuario/2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "PUT /produtos/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "PUT /pedidos/1/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "GET /relatorios/vendas HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:23] "POST /login HTTP/1.1" 200 -
+WARNING:controllers.usuario_controller:Login falhou para o usuário informado
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:24] "POST /login HTTP/1.1" 401 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:24] "POST /admin/query HTTP/1.1" 403 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:24] "DELETE /produtos/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2026 16:07:24] "POST /admin/reset-db HTTP/1.1" 403 -
