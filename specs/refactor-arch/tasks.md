@@ -28,4 +28,4 @@ Skill path: `code-smells-project/.claude/skills/refactor-arch/` (master copy).
 ## Phase D: docs
 
 - [x] T13 README: A) Análise Manual (PT-BR, from spec ground truth + why), B) Construção da Skill, C) Resultados (counts, before/after trees, filled checklists, validation logs), D) Como Executar.
-- [ ] T14 Final review against README acceptance criteria; commit.
+- [x] T14 Final review against README acceptance criteria; commit.
