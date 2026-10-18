@@ -16,12 +16,12 @@ Skill path: `code-smells-project/.claude/skills/refactor-arch/` (master copy).
 ## Phase B: orchestration
 
 - [x] T7 `SKILL.md`: frontmatter, cwd-only rule, 3 phases with reference loading, Phase 2 save + print + `[y/n]` gate, Phase 3 incremental steps, final block with "remaining" list (C2). Under ~200 lines.
-- [ ] T8 Commit skill.
+- [x] T8 Commit skill.
 
 ## Phase C: execution (one project at a time, fresh session in project folder)
 
-- [ ] T9 P1 run. Check: stack, >= 5 ground-truth matches, >= 1 CRITICAL/HIGH, boot + endpoints OK. Iterate (reset per D15, fix skill in master, recommit). On pass: commit refactored P1, copy report to `reports/audit-project-1.md`.
-- [ ] T10 Copy skill to P2; run; same checks; commit; `reports/audit-project-2.md`.
+- [x] T9 P1 run. Check: stack, >= 5 ground-truth matches, >= 1 CRITICAL/HIGH, boot + endpoints OK. Iterate (reset per D15, fix skill in master, recommit). On pass: commit refactored P1, copy report to `reports/audit-project-1.md`.
+- [x] T10 Copy skill to P2; run; same checks; commit; `reports/audit-project-2.md`.
 - [ ] T11 Copy skill to P3; run (seed first); same checks; commit; `reports/audit-project-3.md`.
 - [ ] T12 If the skill changed during T10/T11, re-copy final version to all 3 projects (identical copies).
 
