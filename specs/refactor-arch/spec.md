@@ -130,6 +130,7 @@ Endpoints: 22 (tasks, users, login, reports, categories, health).
 
 - D1 Phase 3 scope: MVC restructuring + fix all CRITICAL and HIGH findings + whatever the validation checklist requires (config module, centralized error handling, clear entry point). Remaining MEDIUM/LOW are listed as "remaining" in the Phase 3 output, never claimed as fixed. Constraint: original endpoints keep paths, methods and response shape (minus leaked sensitive fields).
 - D2 Inherently dangerous endpoints (e.g. arbitrary SQL, DB reset) and every unauthenticated admin or destructive route are kept but guarded by config: they return 403 unless an env flag enables them. The route still responds; the risk is closed and noted in the report.
+- D20 Guard scope (refines D2): only admin routes, raw SQL/code execution, DB reset/bulk wipe and account deletion are guarded. Normal resource CRUD keeps working. A missing authentication system is reported CRITICAL but listed as remaining (out of scope).
 - D4 MVC layers are fixed (config, models, views/routes, controllers, middlewares); folder names follow the stack idiom. Partially layered projects evolve in place (add missing layers) instead of being moved under `src/`.
 - D5 Endpoint contract: success responses keep path, method, status and shape (minus sensitive fields); error responses may adopt a standard envelope (`{"error": ...}`).
 - D6 HIGH logic bugs are fixed even when behavior changes; the validation baseline only compares happy-path requests.

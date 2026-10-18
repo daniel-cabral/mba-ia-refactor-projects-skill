@@ -9,13 +9,15 @@ Spec: [spec.md](spec.md)
 - Deps install unmodified: P1 (Flask 3.1.1), P3 (Flask 3.0.0), P2 (`npm ci`). Python projects use a local `.venv/` (gitignored).
 - All 3 apps boot unmodified and answer 200 (P1 `/produtos`, P3 `/health`, `/tasks`, P2 `/api/admin/financial-report`).
 - Gotcha: Flask `debug=True` spawns a reloader child; killing the parent leaves the port bound. P1 and P3 both use port 5000. Validation must free the port before boot and kill the whole process tree after (POSIX and Windows commands both documented).
+- Discovery check passed: a fresh session in `code-smells-project/` resolves `/refactor-arch`. Gotcha: in Git Bash, `claude -p "/refactor-arch"` is mangled to a Windows path; use `MSYS_NO_PATHCONV=1` or PowerShell.
+- Leak risk observed: a session that did not resolve the skill wandered up to the repo root and found `specs/`. SKILL.md must forbid reading outside the cwd (D18).
 - Booting creates gitignored DB files (`loja.db`, `instance/tasks.db`) with seed data; they survive `git restore` and must be deleted for a fresh state.
 
 ## Skill layout
 
 Authored once in `code-smells-project/.claude/skills/refactor-arch/`, then copied unchanged to the other two projects (FR6).
 
-```
+```text
 refactor-arch/
 ├── SKILL.md                       # orchestration: 3 phases, gates, output blocks
 └── references/
