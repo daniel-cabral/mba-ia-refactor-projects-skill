@@ -1,0 +1,7 @@
+
+> desafio-arquitetura-ia-boilerplate@1.0.0 start
+> node src/app.js
+
+[2026-10-18T19:15:43.210Z] INFO LMS API listening on port 3000
+[2026-10-18T19:16:14.963Z] INFO Processing payment {"courseId":2,"cardLast4":"4444"}
+[2026-10-18T19:16:15.064Z] INFO Processing payment {"courseId":1,"cardLast4":"4444"}
