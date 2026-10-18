@@ -565,13 +565,13 @@ Decisões de design:
 
 ### Resumo das auditorias
 
-| Projeto | CRITICAL | HIGH | MEDIUM | LOW | Total | Relatório |
-| --- | --- | --- | --- | --- | --- | --- |
-| code-smells-project | 7 | 5 | 6 | 5 | 23 | [audit-project-1.md](reports/audit-project-1.md) |
-| ecommerce-api-legacy | 5 | 5 | 5 | 5 | 20 | [audit-project-2.md](reports/audit-project-2.md) |
-| task-manager-api | 5 | 4 | 6 | 5 | 20 | [audit-project-3.md](reports/audit-project-3.md) |
+| Projeto | CRITICAL | HIGH | MEDIUM | LOW | Total | Gabarito reencontrado | Relatório |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| code-smells-project | 7 | 5 | 6 | 5 | 23 | 21/22 | [audit-project-1.md](reports/audit-project-1.md) |
+| ecommerce-api-legacy | 5 | 5 | 5 | 5 | 20 | 19/20 | [audit-project-2.md](reports/audit-project-2.md) |
+| task-manager-api | 5 | 4 | 6 | 5 | 20 | 22/22 | [audit-project-3.md](reports/audit-project-3.md) |
 
-Nos 3 projetos, a auditoria cobriu bem mais do que os 5 itens mínimos do gabarito manual.
+"Gabarito reencontrado" compara os itens da análise manual (spec) com os findings do relatório, item a item, por palavra-chave e leitura. Não reencontrados: P1, falta de autenticação nas rotas comuns (o relatório cobre só as rotas admin); P2, status codes imprecisos (201/204). O mínimo exigido era 5 por projeto.
 
 ### Antes e depois
 
@@ -642,7 +642,7 @@ utils/                     utils/ + validators.py
 | Error handling centralizado | ✓ | ✓ | ✓ |
 | Entry point claro | ✓ | ✓ | ✓ |
 | Aplicação inicia sem erros | ✓ | ✓ | ✓ |
-| Endpoints originais respondem | ✓ 26/26 | ✓ 7/7 | ✓ 29/29 |
+| Endpoints originais respondem (requests do plano; endpoints: 19 / 3 / 22) | ✓ 26/26 | ✓ 7/7 | ✓ 29/29 |
 
 ### Evidências de execução
 
@@ -650,7 +650,7 @@ Cada projeto tem em `reports/` o relatório, o log de validação (baseline e de
 
 - P1: [validation-log.md](code-smells-project/reports/validation-log.md), [boot-after.log](code-smells-project/reports/boot-after.log)
 - P2: [validation-log.md](ecommerce-api-legacy/reports/validation-log.md), [boot-after.log](ecommerce-api-legacy/reports/boot-after.log)
-- P3: [validation-log.md](task-manager-api/reports/validation-log.md), [boot-after.log](task-manager-api/reports/boot-after.log)
+- P3: [validation-log.md](task-manager-api/reports/validation-log.md), [boot-after.err.log](task-manager-api/reports/boot-after.err.log) (o Flask escreve "Running on" no stderr)
 
 Além da validação da própria skill, fiz uma verificação independente em cada projeto, com banco limpo, boot e curl em todos os endpoints:
 
@@ -707,5 +707,7 @@ cd ecommerce-api-legacy && npm ci && npm start   # requests de exemplo em api.ht
 cd task-manager-api && python -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python seed.py && .venv/bin/python app.py   # http://127.0.0.1:5000/tasks
 ```
+
+No Windows, use `.venv\Scripts\python` e `.venv\Scripts\pip` no lugar de `.venv/bin/...`.
 
 Rotas administrativas: `ADMIN_ENABLED=1` (P1 e P3) ou `ADMIN_TOKEN=<token>` com o header `x-admin-token` (P2). As demais variáveis estão no `.env.example` de cada projeto.
