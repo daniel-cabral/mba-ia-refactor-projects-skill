@@ -30,7 +30,7 @@ Three sequential phases: **Analysis -> Audit -> (confirmation) -> Refactoring**.
 2. Inventory source files (respect the ignore list). Read the manifest(s), the entry point and every source file.
 3. Detect language, framework + version, dependencies, database + tables, entry point, start command, port, seed/setup scripts, domain and architecture classification.
 4. Discover every endpoint (`METHOD path`), including blueprint/router prefixes.
-5. Print the Phase 1 block exactly as defined in `project-analysis.md` section 8.
+5. Print the Phase 1 block exactly as defined in `project-analysis.md` section 8. The endpoint count must equal the number of items in the endpoint list (count them before printing).
 
 Continue directly to Phase 2.
 
@@ -40,7 +40,7 @@ Continue directly to Phase 2.
 2. For each catalog entry: search with its signals, then read the code to confirm. Record exact locations.
 3. Look for problems outside the catalog that fit a severity (logic bugs, broken business rules); report them as `AP-X` with justification.
 4. Build the report following `report-template.md`: one finding per anti-pattern, ordered CRITICAL -> HIGH -> MEDIUM -> LOW, summary counts consistent with the findings.
-5. Print the full report and save the same content to `./reports/audit-report.md`.
+5. Save the report to `./reports/audit-report.md`, then **print the full report verbatim in your reply** (every finding with File/Description/Impact/Recommendation). Never replace it with a summary or a pointer to the file.
 6. Print:
 
    ```text
