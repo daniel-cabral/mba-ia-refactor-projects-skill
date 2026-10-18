@@ -22,10 +22,10 @@ Skill path: `code-smells-project/.claude/skills/refactor-arch/` (master copy).
 
 - [x] T9 P1 run. Check: stack, >= 5 ground-truth matches, >= 1 CRITICAL/HIGH, boot + endpoints OK. Iterate (reset per D15, fix skill in master, recommit). On pass: commit refactored P1, copy report to `reports/audit-project-1.md`.
 - [x] T10 Copy skill to P2; run; same checks; commit; `reports/audit-project-2.md`.
-- [ ] T11 Copy skill to P3; run (seed first); same checks; commit; `reports/audit-project-3.md`.
-- [ ] T12 If the skill changed during T10/T11, re-copy final version to all 3 projects (identical copies).
+- [x] T11 Copy skill to P3; run (seed first); same checks; commit; `reports/audit-project-3.md`.
+- [x] T12 If the skill changed during T10/T11, re-copy final version to all 3 projects (identical copies).
 
 ## Phase D: docs
 
-- [ ] T13 README: A) Análise Manual (PT-BR, from spec ground truth + why), B) Construção da Skill, C) Resultados (counts, before/after trees, filled checklists, validation logs), D) Como Executar.
+- [x] T13 README: A) Análise Manual (PT-BR, from spec ground truth + why), B) Construção da Skill, C) Resultados (counts, before/after trees, filled checklists, validation logs), D) Como Executar.
 - [ ] T14 Final review against README acceptance criteria; commit.
