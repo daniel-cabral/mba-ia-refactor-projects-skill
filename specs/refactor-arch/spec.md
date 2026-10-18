@@ -141,10 +141,10 @@ Endpoints: 22 (tasks, users, login, reports, categories, health).
 - D12 Destructive requests (DELETE, reset) run last in both baseline and validation.
 - D13 Phase 3 runs incrementally (config, models, controllers, routes, error handler), checking boot after each step.
 - D14 Dependency versions may be bumped only when needed to boot or to remove a deprecated API; recorded in the report.
-- D15 The skill never commits. Between iterations the project folder is reset with `git restore`; the skill always starts from the original code.
+- D15 The skill never commits. The skill is committed before every run. Between iterations the project is reset to the original: `git restore` + `git clean` of the project folder excluding `.claude/`, plus deleting gitignored `*.db` / `instance/`. Each run happens in a fresh Claude Code session started inside the project folder.
 - D16 Validation failure: fix and re-validate up to 3 times; then stop and report the failure, never claim success.
 - D17 One finding per anti-pattern, listing all its locations (no per-occurrence inflation).
-- D18 Phases 1-2 ignore `.claude/`, `node_modules/`, `reports/`, virtualenvs, lock files and `.db` files.
+- D18 Phases 1-2 analyze only the current working directory (never parent folders) and ignore `.claude/`, `node_modules/`, `reports/`, virtualenvs, lock files and `.db` files.
 - D19 Phase 2 prints the full report to the terminal, saves it (D3), then asks `[y/n]`.
 - D3 The skill saves the Phase 2 report to `./reports/audit-report.md` inside the target project (stays tech and repo agnostic); we copy it to the repo-root `reports/audit-project-N.md`.
 
