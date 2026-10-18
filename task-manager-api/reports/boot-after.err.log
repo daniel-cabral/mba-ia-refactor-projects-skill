@@ -1,0 +1,52 @@
+SECRET_KEY not set; using a random development key
+2026-10-18 16:24:24,715 INFO werkzeug: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+2026-10-18 16:24:24,717 INFO werkzeug: Press CTRL+C to quit
+2026-10-18 16:24:24,833 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:24] "GET /health HTTP/1.1" 200 -
+2026-10-18 16:24:24,959 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:24] "GET / HTTP/1.1" 200 -
+2026-10-18 16:24:24,986 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:24] "GET /health HTTP/1.1" 200 -
+2026-10-18 16:24:25,014 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "GET /tasks HTTP/1.1" 200 -
+2026-10-18 16:24:25,034 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "GET /tasks/1 HTTP/1.1" 200 -
+2026-10-18 16:24:25,037 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "GET /tasks/search?q=bug&status=pending HTTP/1.1" 200 -
+2026-10-18 16:24:25,041 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "GET /tasks/stats HTTP/1.1" 200 -
+2026-10-18 16:24:25,043 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "GET /users HTTP/1.1" 200 -
+2026-10-18 16:24:25,046 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "GET /users/1 HTTP/1.1" 200 -
+2026-10-18 16:24:25,048 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "GET /users/1/tasks HTTP/1.1" 200 -
+2026-10-18 16:24:25,054 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "GET /reports/summary HTTP/1.1" 200 -
+2026-10-18 16:24:25,056 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "GET /reports/user/1 HTTP/1.1" 200 -
+2026-10-18 16:24:25,059 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "GET /categories HTTP/1.1" 200 -
+2026-10-18 16:24:25,073 INFO controllers.task_controller: Task created: 11
+2026-10-18 16:24:25,073 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "POST /tasks HTTP/1.1" 201 -
+2026-10-18 16:24:25,096 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "GET /tasks/11 HTTP/1.1" 200 -
+2026-10-18 16:24:25,237 INFO controllers.user_controller: User created: 4
+2026-10-18 16:24:25,238 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "POST /users HTTP/1.1" 201 -
+2026-10-18 16:24:25,263 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "POST /categories HTTP/1.1" 201 -
+2026-10-18 16:24:25,294 INFO controllers.task_controller: Task updated: 1
+2026-10-18 16:24:25,295 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "PUT /tasks/1 HTTP/1.1" 200 -
+2026-10-18 16:24:25,304 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "PUT /users/2 HTTP/1.1" 200 -
+2026-10-18 16:24:25,314 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "PUT /categories/1 HTTP/1.1" 200 -
+2026-10-18 16:24:25,450 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "POST /login HTTP/1.1" 200 -
+2026-10-18 16:24:25,588 WARNING controllers.user_controller: Failed login attempt
+2026-10-18 16:24:25,589 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "POST /login HTTP/1.1" 401 -
+2026-10-18 16:24:25,615 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "POST /tasks HTTP/1.1" 400 -
+2026-10-18 16:24:25,617 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "GET /tasks/999 HTTP/1.1" 404 -
+2026-10-18 16:24:25,619 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "GET /users/999 HTTP/1.1" 404 -
+2026-10-18 16:24:25,621 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "PUT /categories/1 HTTP/1.1" 400 -
+2026-10-18 16:24:25,750 INFO controllers.user_controller: User created: 5
+2026-10-18 16:24:25,751 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "POST /users HTTP/1.1" 201 -
+2026-10-18 16:24:25,778 INFO controllers.task_controller: Task deleted: 2
+2026-10-18 16:24:25,778 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "DELETE /tasks/2 HTTP/1.1" 200 -
+2026-10-18 16:24:25,789 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "DELETE /categories/4 HTTP/1.1" 200 -
+2026-10-18 16:24:25,790 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:25] "DELETE /users/4 HTTP/1.1" 403 -
+2026-10-18 16:24:41,059 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:41] "GET /users/5 HTTP/1.1" 200 -
+2026-10-18 16:24:41,111 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:41] "PUT /users/5 HTTP/1.1" 200 -
+2026-10-18 16:24:41,117 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:41] "GET /tasks?limit=2&offset=1 HTTP/1.1" 200 -
+2026-10-18 16:24:41,124 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:41] "GET /tasks?limit=abc HTTP/1.1" 400 -
+2026-10-18 16:24:41,150 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:41] "GET /tasks/search?priority=abc HTTP/1.1" 400 -
+2026-10-18 16:24:41,154 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:41] "GET /tasks/search?q=%25 HTTP/1.1" 200 -
+2026-10-18 16:24:41,157 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:41] "POST /tasks HTTP/1.1" 400 -
+2026-10-18 16:24:41,159 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:41] "GET /nope HTTP/1.1" 404 -
+2026-10-18 16:24:41,161 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:41] "DELETE /users/5 HTTP/1.1" 403 -
+2026-10-18 16:24:41,162 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:41] "GET /health HTTP/1.1" 200 -
+2026-10-18 16:24:46,305 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:46] "GET /tasks/search?q=%25 HTTP/1.1" 200 -
+2026-10-18 16:24:46,308 INFO werkzeug: 127.0.0.1 - - [18/Oct/2026 16:24:46] "GET /tasks/search?q=bug HTTP/1.1" 200 -

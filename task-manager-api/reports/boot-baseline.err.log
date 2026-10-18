@@ -1,0 +1,38 @@
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.50:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 462-871-560
+127.0.0.1 - - [18/Oct/2026 16:20:47] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "GET /tasks HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "GET /tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "GET /tasks/search?q=bug&status=pending HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "GET /tasks/stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "GET /users HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "GET /users/1 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "GET /users/1/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "GET /reports/summary HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "GET /reports/user/1 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "GET /categories HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "POST /tasks HTTP/1.1" 201 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "GET /tasks/11 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "POST /users HTTP/1.1" 201 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "POST /categories HTTP/1.1" 201 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "PUT /tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "PUT /users/2 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "PUT /categories/1 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "POST /login HTTP/1.1" 401 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "POST /tasks HTTP/1.1" 400 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "GET /tasks/999 HTTP/1.1" 404 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "GET /users/999 HTTP/1.1" 404 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "PUT /categories/1 HTTP/1.1" 400 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "POST /users HTTP/1.1" 201 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "DELETE /tasks/2 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "DELETE /categories/4 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 16:20:51] "DELETE /users/4 HTTP/1.1" 200 -
